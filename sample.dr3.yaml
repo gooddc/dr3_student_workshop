@@ -1,0 +1,55 @@
+source: J1744-1134
+par-directory: pars/
+tim-directory: tims/J1744-1134/
+timing-model: J1744-1134_ngclean.par
+compare-model: 
+toas:
+- J1744-1134_PINT_20220302.nb.tim # GBT
+- EFF.EBPP.1360.tim # Effelsberg
+- EFF.EBPP.1410.tim
+- EFF.EBPP.2639.tim
+- EFF.P200.1380.tim
+- EFF.P217.1380.tim
+- EFF.S110.2487.tim
+- EFF.S60.4857.tim
+- GM.GWB.1460.200.b0.tim # GMRT
+- GM.GWB.500.200.b1.tim
+- J1744-1134.tim # Parkes
+- JBO.DFB.1520.tim #Jodrell
+- JBO.ROACH.1520.tim
+- LEAP.1396.tim #LEAP
+- NRT.BON.1400.tim # Nancay
+- NRT.BON.1600.tim
+- NRT.BON.2000.tim
+- NRT.NUPPI.1484.tim
+- NRT.NUPPI.2539.tim
+- WSRT.P1.323.tim # Westerbork
+- WSRT.P1.367.tim
+- WSRT.P2.1380.tim
+- J1744-1134_16ch.tim # MeerKAT
+
+
+free-params: 
+free-dmx: Yes
+toa-type: NB
+fitter: DownhillGLSFitter
+n-iterations: 20
+ephem: DE440
+bipm: BIPM2021
+
+
+ignore: # toa excision
+  mjd-start:
+  mjd-end:
+  snr-cut: 
+  bad-toa:
+  bad-toa-averaged:
+  - [CJ100115_113715.NEFTp, None, None]
+  bad-range:
+  bad-file:
+
+  prob-outlier: 0.1
+
+
+changelog:
+- '2023-06-02 INIT: Make initial yaml file'

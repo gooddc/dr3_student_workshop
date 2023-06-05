@@ -1,0 +1,20 @@
+MODE 1
+PSR                            1748-2021E
+UNITS                                 TDB
+TIMEEPH                              FB90
+#T2CMETHOD                        IAU2000B
+RAJ                     17:48:52.75000000 1 0.04999999999999999584
+DECJ                   -20:21:29.00000000 1 0.40000000000000002220
+PMRA                                  0.0
+PMDEC                                 0.0
+PX                                    0.0
+POSEPOCH           53750.0000000000000000
+PLANET_SHAPIRO                          N
+SOLARN0                               0.0
+DM                                  223.9 1 0.3
+TZRMJD             53801.3860512007484954
+TZRSITE                                 1
+TZRFRQ                           1949.609
+F0                           61.485476554 1 5e-10
+F1                             -1.181e-15 1 1e-18
+PEPOCH             53750.0000000000000000

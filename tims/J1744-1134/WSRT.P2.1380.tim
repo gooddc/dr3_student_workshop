@@ -1,0 +1,56 @@
+FORMAT 1
+C /export/astron/shaifullah/data_paragon/EPTA_6psrs_P2/1380/J1744-1134_20080622_77520_cleaned.FTP 1380.000000 54639.905802936127204 375.339 wsrt -sys WSRT.P2.1380 -pta EPTA
+C /export/astron/shaifullah/data_paragon/EPTA_6psrs_P2/1380/J1744-1134_20090719_70870_cleaned.FTP 1380.000000 55031.828940620243871 56.731 wsrt -sys WSRT.P2.1380 -pta EPTA
+/export/astron/shaifullah/data_paragon/EPTA_6psrs_P2/1380/J1744-1134_20110819_73110_cleaned.FTP 1380.000000 55792.854953937590944 1.144 wsrt -sys WSRT.P2.1380 -pta EPTA -group WSRT.P2.1380
+/export/astron/shaifullah/data_paragon/EPTA_6psrs_P2/1380/J1744-1134_20110919_59500_cleaned.FTP 1380.000000 55823.697419166770990 1.146 wsrt -sys WSRT.P2.1380 -pta EPTA -group WSRT.P2.1380
+/export/astron/shaifullah/data_paragon/EPTA_6psrs_P2/1380/J1744-1134_20111014_60050_cleaned.FTP 1380.000000 55848.703801572282846 0.080 wsrt -sys WSRT.P2.1380 -pta EPTA -group WSRT.P2.1380
+/export/astron/shaifullah/data_paragon/EPTA_6psrs_P2/1380/J1744-1134_20111016_57710_cleaned.FTP 1380.000000 55850.683334004537424 1.058 wsrt -sys WSRT.P2.1380 -pta EPTA -group WSRT.P2.1380
+/export/astron/shaifullah/data_paragon/EPTA_6psrs_P2/1380/J1744-1134_20111114_39000_cleaned.FTP 1380.000000 55879.471983583758282 0.809 wsrt -sys WSRT.P2.1380 -pta EPTA -group WSRT.P2.1380
+/export/astron/shaifullah/data_paragon/EPTA_6psrs_P2/1380/J1744-1134_20120108_27580_cleaned.FTP 1380.000000 55934.339909844277762 2.543 wsrt -sys WSRT.P2.1380 -pta EPTA -group WSRT.P2.1380
+/export/astron/shaifullah/data_paragon/EPTA_6psrs_P2/1380/J1744-1134_20120130_21050_cleaned.FTP 1380.000000 55956.248709569514252 1.428 wsrt -sys WSRT.P2.1380 -pta EPTA -group WSRT.P2.1380
+/export/astron/shaifullah/data_paragon/EPTA_6psrs_P2/1380/J1744-1134_20120203_27610_cleaned.FTP 1380.000000 55960.338421204854985 0.364 wsrt -sys WSRT.P2.1380 -pta EPTA -group WSRT.P2.1380
+/export/astron/shaifullah/data_paragon/EPTA_6psrs_P2/1380/J1744-1134_20120218_13750_cleaned.FTP 1390.000000 55975.179826228898172 0.271 wsrt -sys WSRT.P2.1380 -pta EPTA -group WSRT.P2.1380
+C /export/astron/shaifullah/data_paragon/EPTA_6psrs_P2/1380/J1744-1134_20120325_20540_cleaned.FTP 1396.124512 56011.242787044466378 1.706 wsrt -sys WSRT.P2.1380 -pta EPTA -group WSRT.P2.1380
+/export/astron/shaifullah/data_paragon/EPTA_6psrs_P2/1380/J1744-1134_20120401_17010_cleaned.FTP 1383.333333 56018.217579622397111 0.281 wsrt -sys WSRT.P2.1380 -pta EPTA -group WSRT.P2.1380
+/export/astron/shaifullah/data_paragon/EPTA_6psrs_P2/1380/J1744-1134_20120505_83360_cleaned.FTP 1380.000000 56052.985402275813720 1.262 wsrt -sys WSRT.P2.1380 -pta EPTA -group WSRT.P2.1380
+/export/astron/shaifullah/data_paragon/EPTA_6psrs_P2/1380/J1744-1134_20120518_01210_cleaned.FTP 1380.000000 56065.029501085918839 0.212 wsrt -sys WSRT.P2.1380 -pta EPTA -group WSRT.P2.1380
+/export/astron/shaifullah/data_paragon/EPTA_6psrs_P2/1380/J1744-1134_20120602_86140_cleaned.FTP 1380.000000 56081.010639118026362 0.746 wsrt -sys WSRT.P2.1380 -pta EPTA -group WSRT.P2.1380
+/export/astron/shaifullah/data_paragon/EPTA_6psrs_P2/1380/J1744-1134_20120811_74060_cleaned.FTP 1380.000000 56150.872535229101683 0.481 wsrt -sys WSRT.P2.1380 -pta EPTA -group WSRT.P2.1380
+/export/astron/shaifullah/data_paragon/EPTA_6psrs_P2/1380/J1744-1134_20120912_71220_cleaned.FTP 1380.000000 56182.839693708347296 0.118 wsrt -sys WSRT.P2.1380 -pta EPTA -group WSRT.P2.1380
+/export/astron/shaifullah/data_paragon/EPTA_6psrs_P2/1380/J1744-1134_20121008_56250_cleaned.FTP 1380.000000 56208.666426954019783 0.665 wsrt -sys WSRT.P2.1380 -pta EPTA -group WSRT.P2.1380
+/export/astron/shaifullah/data_paragon/EPTA_6psrs_P2/1380/J1744-1134_20121115_40910_cleaned.FTP 1380.000000 56246.488890628122567 0.112 wsrt -sys WSRT.P2.1380 -pta EPTA -group WSRT.P2.1380
+/export/astron/shaifullah/data_paragon/EPTA_6psrs_P2/1380/J1744-1134_20121229_38250_cleaned.FTP 1380.000000 56290.451483005435088 0.712 wsrt -sys WSRT.P2.1380 -pta EPTA -group WSRT.P2.1380
+/export/astron/shaifullah/data_paragon/EPTA_6psrs_P2/1380/J1744-1134_20130112_46510_cleaned.FTP 1380.000000 56304.548670723108561 1.028 wsrt -sys WSRT.P2.1380 -pta EPTA -group WSRT.P2.1380
+/export/astron/shaifullah/data_paragon/EPTA_6psrs_P2/1380/J1744-1134_20130210_31490_cleaned.FTP 1380.000000 56333.379856939205495 0.126 wsrt -sys WSRT.P2.1380 -pta EPTA -group WSRT.P2.1380
+/export/astron/shaifullah/data_paragon/EPTA_6psrs_P2/1380/J1744-1134_20130316_25210_cleaned.FTP 1380.000000 56367.307154094234107 0.638 wsrt -sys WSRT.P2.1380 -pta EPTA -group WSRT.P2.1380
+/export/astron/shaifullah/data_paragon/EPTA_6psrs_P2/1380/J1744-1134_20130421_07830_cleaned.FTP 1390.000000 56403.105899427172149 1.344 wsrt -sys WSRT.P2.1380 -pta EPTA -group WSRT.P2.1380
+/export/astron/shaifullah/data_paragon/EPTA_6psrs_P2/1380/J1744-1134_20130519_13320_cleaned.FTP 1380.000000 56431.169544099533970 0.169 wsrt -sys WSRT.P2.1380 -pta EPTA -group WSRT.P2.1380
+/export/astron/shaifullah/data_paragon/EPTA_6psrs_P2/1380/J1744-1134_20130616_04040_cleaned.FTP 1400.000000 56459.062125576124499 0.168 wsrt -sys WSRT.P2.1380 -pta EPTA -group WSRT.P2.1380
+/export/astron/shaifullah/data_paragon/EPTA_6psrs_P2/1380/J1744-1134_20130712_02720_cleaned.FTP 1380.000000 56485.046878499638296 0.375 wsrt -sys WSRT.P2.1380 -pta EPTA -group WSRT.P2.1380
+/export/astron/shaifullah/data_paragon/EPTA_6psrs_P2/1380/J1744-1134_20130821_67970_cleaned.FTP 1380.000000 56525.802065199249929 1.151 wsrt -sys WSRT.P2.1380 -pta EPTA -group WSRT.P2.1380
+/export/astron/shaifullah/data_paragon/EPTA_6psrs_P2/1380/J1744-1134_20130916_65700_cleaned.FTP 1380.000000 56551.775809731438271 0.426 wsrt -sys WSRT.P2.1380 -pta EPTA -group WSRT.P2.1380
+/export/astron/shaifullah/data_paragon/EPTA_6psrs_P2/1380/J1744-1134_20131013_50780_cleaned.FTP 1380.000000 56578.603106924226772 0.310 wsrt -sys WSRT.P2.1380 -pta EPTA -group WSRT.P2.1380
+/export/astron/shaifullah/data_paragon/EPTA_6psrs_P2/1380/J1744-1134_20131031_63230_cleaned.FTP 1380.000000 56596.747209407856446 0.172 wsrt -sys WSRT.P2.1380 -pta EPTA -group WSRT.P2.1380
+/export/astron/shaifullah/data_paragon/EPTA_6psrs_P2/1380/J1744-1134_20131122_43060_cleaned.FTP 1380.000000 56618.513767224291882 0.643 wsrt -sys WSRT.P2.1380 -pta EPTA -group WSRT.P2.1380
+/export/astron/shaifullah/data_paragon/EPTA_6psrs_P2/1380/J1744-1134_20131214_50590_cleaned.FTP 1380.000000 56640.601041658610144 0.170 wsrt -sys WSRT.P2.1380 -pta EPTA -group WSRT.P2.1380
+/export/astron/shaifullah/data_paragon/EPTA_6psrs_P2/1380/J1744-1134_20140112_45100_cleaned.FTP 1380.000000 56669.537562745922193 0.226 wsrt -sys WSRT.P2.1380 -pta EPTA -group WSRT.P2.1380
+/export/astron/shaifullah/data_paragon/EPTA_6psrs_P2/1380/J1744-1134_20140209_39450_cleaned.FTP 1380.000000 56697.472108308868865 0.454 wsrt -sys WSRT.P2.1380 -pta EPTA -group WSRT.P2.1380
+/export/astron/shaifullah/data_paragon/EPTA_6psrs_P2/1380/J1744-1134_20140316_15490_cleaned.FTP 1380.000000 56732.194781703301672 0.191 wsrt -sys WSRT.P2.1380 -pta EPTA -group WSRT.P2.1380
+/export/astron/shaifullah/data_paragon/EPTA_6psrs_P2/1380/J1744-1134_20140410_22110_cleaned.FTP 1375.714286 56757.271404964005777 0.209 wsrt -sys WSRT.P2.1380 -pta EPTA -group WSRT.P2.1380
+C /export/astron/shaifullah/data_paragon/EPTA_6psrs_P2/1380/J1744-1134_20140508_20970_cleaned.FTP 1380.000000 56785.258207621226505 3.803 wsrt -sys WSRT.P2.1380 -pta EPTA
+/export/astron/shaifullah/data_paragon/EPTA_6psrs_P2/1380/J1744-1134_20140518_08580_cleaned.FTP 1380.000000 56795.114751905761860 1.814 wsrt -sys WSRT.P2.1380 -pta EPTA -group WSRT.P2.1380
+TIME +10
+/export/astron/shaifullah/data_paragon/EPTA_6psrs_P2/1380/J1744-1134_20140623_83050_cleaned.FTP 1380.000000 56831.982011251002366 1.397 wsrt -sys WSRT.P2.1380 -pta EPTA -group WSRT.P2.1380
+/export/astron/shaifullah/data_paragon/EPTA_6psrs_P2/1380/J1744-1134_20140713_01800_cleaned.FTP 1387.142857 56851.036343231688614 3.210 wsrt -sys WSRT.P2.1380 -pta EPTA -group WSRT.P2.1380
+/export/astron/shaifullah/data_paragon/EPTA_6psrs_P2/1380/J1744-1134_20140817_83550_cleaned.FTP 1380.000000 56886.982587250585586 2.747 wsrt -sys WSRT.P2.1380 -pta EPTA -group WSRT.P2.1380
+/export/astron/shaifullah/data_paragon/EPTA_6psrs_P2/1380/J1744-1134_20140901_80290_cleaned.FTP 1380.000000 56901.944782986226800 0.265 wsrt -sys WSRT.P2.1380 -pta EPTA -group WSRT.P2.1380
+TIME -10
+/export/astron/shaifullah/data_paragon/EPTA_6psrs_P2/1380/J1744-1134_20140915_68800_cleaned.FTP 1390.000000 56915.811809698159058 1.726 wsrt -sys WSRT.P2.1380 -pta EPTA -group WSRT.P2.1380
+/export/astron/shaifullah/data_paragon/EPTA_6psrs_P2/1380/J1744-1134_20140921_70790_cleaned.FTP 1380.000000 56921.840038263494613 0.660 wsrt -sys WSRT.P2.1380 -pta EPTA -group WSRT.P2.1380
+/export/astron/shaifullah/data_paragon/EPTA_6psrs_P2/1380/J1744-1134_20141105_58660_cleaned.FTP 1380.000000 56966.694503334336742 1.467 wsrt -sys WSRT.P2.1380 -pta EPTA -group WSRT.P2.1380
+/export/astron/shaifullah/data_paragon/EPTA_6psrs_P2/1380/J1744-1134_20141215_43480_cleaned.FTP 1380.000000 57006.518631049980401 0.333 wsrt -sys WSRT.P2.1380 -pta EPTA -group WSRT.P2.1380
+/export/astron/shaifullah/data_paragon/EPTA_6psrs_P2/1380/J1744-1134_20150104_44650_cleaned.FTP 1387.142857 57026.532288393522743 0.220 wsrt -sys WSRT.P2.1380 -pta EPTA -group WSRT.P2.1380
+/export/astron/shaifullah/data_paragon/EPTA_6psrs_P2/1380/J1744-1134_20150218_21590_cleaned.FTP 1372.857143 57071.265381401177417 2.200 wsrt -sys WSRT.P2.1380 -pta EPTA -group WSRT.P2.1380
+/export/astron/shaifullah/data_paragon/EPTA_6psrs_P2/1380/J1744-1134_20150320_20270_cleaned.FTP 1380.000000 57101.255305245554318 0.520 wsrt -sys WSRT.P2.1380 -pta EPTA -group WSRT.P2.1380
+/export/astron/shaifullah/data_paragon/EPTA_6psrs_P2/1380/J1744-1134_20150505_85900_cleaned.FTP 1380.000000 57148.014874253435005 5.464 wsrt -sys WSRT.P2.1380 -pta EPTA -group WSRT.P2.1380
+C /export/astron/shaifullah/data_paragon/EPTA_6psrs_P2/1380/J1744-1134_20150523_03950_cleaned.FTP 1396.124512 57165.060590100165335 4.530 wsrt -sys WSRT.P2.1380 -pta EPTA -group WSRT.P2.1380

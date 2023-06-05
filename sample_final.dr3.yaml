@@ -1,0 +1,62 @@
+source: J1744-1134
+par-directory: pars/
+tim-directory: tims/J1744-1134/
+timing-model: J1744-1134_PINT_20230317_prenoise.nb.par
+compare-model: 
+toas:
+- EFF.EBPP.1360.tim # Effelsberg
+- EFF.EBPP.1410.tim
+- EFF.EBPP.2639.tim
+- EFF.P200.1380.tim
+- EFF.P217.1380.tim
+- EFF.S110.2487.tim
+- EFF.S60.4857.tim
+- GM.GWB.1460.200.b0.tim # GMRT
+- GM.GWB.500.200.b1.tim
+- J1744-1134.tim # Parkes
+- J1744-1134_PINT_20220302.nb.tim # GBT
+- JBO.DFB.1520.tim #Jodrell
+- JBO.ROACH.1520.tim
+- LEAP.1396.tim #LEAP
+- NRT.BON.1400.tim # Nancay
+- NRT.BON.1600.tim
+- NRT.BON.2000.tim
+- NRT.NUPPI.1484.tim
+- NRT.NUPPI.2539.tim
+- WSRT.P1.323.tim # Westerbork
+- WSRT.P1.367.tim
+- WSRT.P2.1380.tim
+- J1744-1134_16ch.tim # MeerKAT
+
+
+free-params: 
+             [PX, ELONG, ELAT, PMELONG, PMELAT, F0, F1, DM1, DM2, JUMP1, JUMP2, JUMP3,
+             JUMP4, JUMP5, JUMP6, JUMP7, JUMP8, JUMP9, JUMP10, JUMP11,
+             JUMP12, JUMP13, JUMP14, JUMP15, JUMP16, JUMP17, JUMP18, JUMP19, JUMP20, JUMP21, 
+             JUMP22,JUMP23, JUMP24, JUMP25, JUMP26, JUMP27, JUMP28, JUMP29, JUMP30, JUMP31, 
+             JUMP32, JUMP33, JUMP34, JUMP35, JUMP36, JUMP37, JUMP38, JUMP39, JUMP40,  JUMP41, 
+             JUMP42, JUMP43, JUMP44, JUMP45, JUMP46, JUMP47,JUMP48, JUMP49, JUMP50,  JUMP51, 
+             JUMP52, JUMP53]
+free-dmx: Yes
+toa-type: NB
+fitter: DownhillGLSFitter
+n-iterations: 20
+ephem: DE440
+bipm: BIPM2021
+
+
+ignore: # toa excision
+  mjd-start:
+  mjd-end:
+  snr-cut: 
+  bad-toa:
+  bad-toa-averaged:
+  - [CJ100115_113715.NEFTp, None, None]
+  bad-range:
+  bad-file:
+
+  prob-outlier: 0.1
+
+
+changelog:
+- '2023-06-02 INIT: Make initial yaml file'
