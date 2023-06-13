@@ -1,0 +1,106 @@
+Begin by commenting out most of the Tim files in your yaml. 
+As you add them back in, add the JUMP lines corresponding to each Tim file to your par file 
+and increment your JUMP[number] entries in free-params by the appropriate amount.
+
+# EFF.EBPP.1360.tim
+JUMP            -sys EFF.EBPP.1360     0 1 
+# EFF.EBPP.2639.tim
+JUMP            -sys EFF.EBPP.2639     0 1 
+# EFF.EBPP.1410.tim
+JUMP            -sys EFF.EBPP.1410     0 1 
+# EFF.P200.1380.tim
+JUMP            -sys EFF.P200.1365    0 1 
+JUMP            -sys EFF.P200.1425    0 1 
+# EFF.P217.1380.tim
+JUMP            -sys EFF.P217.1365    0 1 
+JUMP            -sys EFF.P217.1425     0 1
+# EFF.S110.2487.tim
+JUMP            -sys EFF.S110.2487     0 1 
+# EFF.S60.487.tim
+JUMP            -sys EFF.S60.4857     0 1 
+# JBO.DFB.1520.tim
+JUMP            -sys JBO.DFB.1520    0 1 
+# JBO.ROACH.1520.tim
+JUMP            -sys JBO.ROACH.1420   0 1
+JUMP            -sys JBO.ROACH.1620   0 1 
+# LEAP.1396.tim
+JUMP            -sys LEAP.1396     0 1 
+# NRT.BON.1400.tim
+JUMP            -sys NRT.BON.1400    0 1 
+#NRT.BON.1600.tim
+JUMP            -sys NRT.BON.1600      0 1 
+# NRT.BON.2000.tim
+JUMP            -sys NRT.BON.2000     0 1 
+# NRT.NUPPI.1484.tim
+JUMP            -sys NRT.NUPPI.1292    0 1 
+JUMP            -sys NRT.NUPPI.1420    0 1
+JUMP            -sys NRT.NUPPI.1548   0 1 
+JUMP            -sys NRT.NUPPI.1676   0 1 
+# NRT.NUPPI.2539.tim
+JUMP            -sys NRT.NUPPI.2667    0 1 
+JUMP            -sys NRT.NUPPI.2411     0 1 
+# WSRT.P1.323.tim
+JUMP            -sys WSRT.P1.323.C     0 1 
+# WSRT.P1.367.tim
+JUMP            -sys WSRT.P1.367.C     0 1
+# WSRT.P2.1380.tim
+JUMP            -sys WSRT.P2.1380     0 1 
+# J1744-1134_PINT_20220302.nb.tim
+JUMP            -fe Rcvr1_2    0 1 
+JUMP 		-fe Rcvr_800 0 1
+# - GM.GWB.1460.200.b0.tim # GMRT
+JUMP            -fe uGMRT_B5    0 1 
+# - GM.GWB.500.200.b1.tim 
+JUMP            -fe uGMRT_B3    0 1 
+# J1744-1134_16ch.tim
+JUMP            -fe KAT    0 1 
+# J1744-1134.tim (PPTA)
+JUMP -g 50CM_CPSR2 -4.4351252754208e-07 1
+JUMP -h 20CM_H-OH_PDFB1 -2.9002280690638e-07 1
+JUMP -h 20CM_MULTI_PDFB1 -3.086881167163e-07 1
+JUMP -g 10CM_PDFB1 -5.2773462835497e-07 1
+JUMP -g 20CM_PDFB2 2.8777582240415e-07 1
+JUMP -g 10CM_PDFB2 7.4979327065382e-09 1
+JUMP -g 20CM_PDFB3 1.0802030804352e-06 1
+JUMP -g 40CM_PDFB3 2.7915286903219e-06 1
+JUMP -g 40CM_CASPSR 3.0669046603034e-07 1
+JUMP -g 20CM_PDFB4 5.7975718418333e-07 1
+JUMP -g 10CM_WBCORR -1.5948821823801e-06 1
+JUMP -h 20CM_H-OH_CPSR2m -2.8879456763163e-06 1
+JUMP -h 20CM_H-OH_CPSR2n -3.0740781017417e-06 1
+JUMP -h 20CM_MULTI_CPSR2m -2.1053090235197e-06 1
+JUMP -h 20CM_MULTI_CPSR2n -2.0654174165276e-06 1
+JUMP -h 20CM_H-OH_PDFB4 -1.1128521546306e-07 1
+JUMP -j 10CM_55319_PDFB4 1.1840555598703e-06 1
+JUMP -j 20CM_55319_PDFB4 5.2985116116929e-07 1
+JUMP -j 20CM_55319_PDFB3 3.6519309541916e-07 1
+JUMP -j 40CM_55319_PDFB3 2.4597323608046e-07 1
+JUMP -f UWL_Medusa 2.8702224448133e-06 1
+JUMP -medusa_59200_jump 1 4.8504154574101e-07 1
+JUMP -group UWL_CASPSR_40CM -3.7018844963078e-07 1
+JUMP -group UWL_PDFB4_20CM 1.889210949643e-06 1
+JUMP -medusa_58925_jump 1 -2e-07 1
+# Also include these for PPTA data but do not fit them.
+JUMP            -caspsr_55500_57616_cals 1                 -1.31e-06 0 0.0
+JUMP            -caspsr_57616_65000_cals 1                -1.533e-06 0 0.0
+JUMP            -dfb3_J0437_55319_56160 1                   2.2e-07 0 0.0
+JUMP            -dfb3_J0437_56160_60000 14.5e-07                       0.0
+JUMP            -pdfb1_512_ch 1              -1.22813e-05 0 0.0
+JUMP            -pdfb1_post_2006 1                  -1.3e-07 0 0.0
+JUMP            -pdfb1_pre_2006 1                 -1.13e-06 0 0.0
+JUMP            -pdfb2_1024_MHz 1                -5.435e-06 0 0.0
+JUMP            -pdfb2_256MHz_1024_ch 1               -1.1395e-05 0 0.0
+JUMP            -pdfb2_256MHz_512ch 1                 -4.75e-06 0 0.0
+JUMP            -pdfb3_1024_256_512 1                  2.45e-06 0 0.0
+JUMP            -pdfb3_1024_MHz 1                  1.03e-06 0 0.0
+JUMP            -pdfb3_256MHz_1024ch 1                 4.295e-06 0 0.0
+JUMP            -pdfb3_256MHz_2048ch 1                  8.32e-06 0 0.0
+JUMP            -pdfb3_64MHz_512ch 1                   8.9e-06 0 0.0
+JUMP            -pdfb4_55319_56055_cals 1                  9.27e-07 0 0.0
+JUMP            -pdfb4_56055_56110_cals 1                  3.82e-07 0 0.0
+JUMP            -pdfb4_56110_56160_cals 1                  5.41e-07 0 0.0
+JUMP            -pdfb4_56160_57575_cals 1                  4.25e-07 0 0.0
+JUMP            -pdfb4_57575_65000_cals 1                  1.71e-07 0 0.0
+JUMP            -wbb_c_config 1                   3.8e-07 0 0.0
+JUMP            -pdfb4.*_1024_[1,2]... 1                  2.23e-06 0 0.0
+JUMP            -pdfb4_1024_256_512 1                  3.23e-06 0 0.0
