@@ -1,0 +1,65 @@
+Step by step through a practice combination.
+
+1. Begin by checking that the par/tim directories listed at the top of the file are correct and that the listed par and tim files exist. You can do this manually or by trying to run the first real cell in the notebook -- specifically the line
+``mo,to = tc.get_model_and_toas(apply_initial_cuts=False,usepickle=False)``
+
+Once we're able to load our data, it's time to start a combination. We don't actually want to start by fitting every parameter for every observation in the set. That's likely to send PINT into a local minimum and we won't be able to find the problem. 
+
+Instead, we're going to slowly load data, PTA by PTA, in a series of iterative steps. 
+
+Important: each time we fit a parameter, we need to update our next input par file to be the output of the previous run. Otherwise, the computer doesn't know about the last fit. So if I run a notebook starting with e.g. J1744-1134_starting.par and fit JUMPS for NANOGrav, I need to save the output using the function lu.write_par and use the output of that (probably something like J1744-1134_PINT_20240612_prenoise.nb.par) as my new input par (in the ``timing-model:`` line in the config).
+
+2. To make a data combination, the first thing we need to do is to fit phase jumps. These are arbitrary offsets between different physical observing systems. 
+We'll need a LOT of them, and no one expects you to know them all off the top of your head. Look at the file "jump_cheatsheet.txt" for a 
+complete list of what JUMPs should be added.
+
+To add a JUMP in PINT, you need to follow two steps:
+        1. Add a line to the par file of the form JUMP -<flag> <flag value> 0 1. 
+        For example, to add a JUMP for the GBT L-band receiver, you'd add
+        JUMP -fe Rcvr1_2 0 1
+        to the par file. The 0 is a starting guess for the jump and can be any number. The 1 tells PINT to fit for that parameter.
+        2. Add an entry into the free-params list. 
+        In your config file, you should see a line "free-params: ". Create a list of the form [parameter, parameter, parameter] for all parameters you want to fit. For JUMP parameters, the format is JUMP1, JUMP2, JUMP3, etc. These will be assigned to the JUMP -<flag> <value> parameters in the order in which they appear. 
+
+Both steps need to be completed for the notebook to fit new jumps. 
+
+I'd recommend you fit this tim file-by-tim file. So start with 1 tim file and just the number of jumps that correspond to that tim file. For your next fit, use the output par file as your starting point and add one more tim file's worth of jumps to the free params/par file. 
+
+2. In the current IPTA scheme, the next thing we want to deal with is FDJUMPs. These are brand new parameters which allow us to deal with frequency dependence in the pulsar. We need them for MPTA, NANOGrav, and PPTA. Currently, we're just directly replacing the number of FD parameters from previous fits with the same number of FDJUMP parameters, but this part of the schema is still developing. 
+
+For our example pulsar, NANOGrav has 4 FD parameters, PPTA has 3 and MPTA reports none. These parameters are always fit by PTA, not by individual observatory. (Though in practice, as they never apply to EPTA, that is usually the same thing.)
+
+The process for fitting these parameters is very similar to fitting phase jumps. 
+    1. In the par file, add a line of the form ``FD1JUMP -pta NANOGrav 0 1`` where we have FD1JUMP for FD1, FD2JUMP for FD2, FD3JUMP for FD3 and so on. 
+    2. In the free-params, add the parameter [FD1JUMP1], where these parameters number the same was JUMPs.
+    
+In the end, for our example, we'll have par file lines:
+    FD1JUMP -pta NANOGrav 0 1
+    FD2JUMP -pta NANOGrav 0 1
+    FD3JUMP -pta NANOGrav 0 1
+    FD4JUMP -pta NANOGrav 0 1
+    FD1JUMP -pta PPTA 0 1
+    FD2JUMP -pta PPTA 0 1
+    FD3JUMP -pta PPTA 0 1
+and free params[FD1JUMP1, FD2JUMP1, FD3JUMP1, FD4JUMP1, FD1JUMP2, FD2JUMP2, FD3JUMP2]. (I do however recommend fitting the NANOGrav and PPTA FDJUMPs as separate runs).
+
+3. Now we're ready to fit the "science-y," classic pulsar timing model parameters.
+
+These come in several categories. For all pulsars, we'll be fitting spin, astrometric, and DM parameters. But for some pulsars we also have binary parameters. Kuo Liu and Thankful Cromartie have worked very hard to get those binary models consistent between Tempo2 and PINT -- big thank you to them. 
+
+The list of pulsar parameters for our example pulsar is parallax, position (elong/elat), proper motion, spin frequency, spin frequency derivative, dispersion measure, and the first and second derivative of the dispersion measure. Make sure each of these parameters has a 1 next to its value in the par file, so it's fit. Your free-params should now include ``[PX, ELONG, ELAT, PMELONG, PMELAT, F0, F1, DM, DM1, DM2]`` in addition to the JUMPs and FDJUMPs. 
+
+4. We're almost done! Hopefully, your solution is looking pretty good and starting to have a not-so-bad reduced chi-squared value. (Remember, a good reduced chi-squared value is about 1.)
+
+We have one more type of parameter to fit: the FDJUMPDM parameter. It's important for this step that your PINT version is 1.0. If it's not, you won't be able to use this tool because it's a pretty new feature. FDJUMPDM parameters apply for InPTA, MPTA, NANOGrav and PPTA but not EPTA. However, you always want to have a "reference" PTA just like we had a reference system in our phase jumps. That means if e.g.you have data from NANOGrav and PPTA, you'll only fit an FDJUMPDM parameter for one of them. 
+
+The syntax works like this:
+    1. In the par file, add a line like ``FDJUMPDM -pta NANOGrav 0 1``
+    2. In free-params, add[FDJUMPDM1, FDJUMPDM2], etc.
+
+For our example, we'll have the par file lines
+    FDJUMPDM -pta NANOGrav 0 1
+    FDJUMPDM -pta MPTA 0 1
+    FDJUMPDM -pta InPTA 0 1
+
+At this stage, you should have a full combined file!
