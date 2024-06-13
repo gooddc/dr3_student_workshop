@@ -49,7 +49,7 @@ These come in several categories. For all pulsars, we'll be fitting spin, astrom
 
 The list of pulsar parameters for our example pulsar is parallax, position (elong/elat), proper motion, spin frequency, spin frequency derivative, dispersion measure, and the first and second derivative of the dispersion measure. Make sure each of these parameters has a 1 next to its value in the par file, so it's fit. Your free-params should now include ``[PX, ELONG, ELAT, PMELONG, PMELAT, F0, F1, DM, DM1, DM2]`` in addition to the JUMPs and FDJUMPs. 
 
-4. We're almost done! Hopefully, your solution is looking pretty good and starting to have a not-so-bad reduced chi-squared value. (Remember, a good reduced chi-squared value is about 1.)
+4. We're almost done! Hopefully, your solution is looking pretty good and starting to have a not-so-bad reduced chi-squared value. (Remember, a good reduced chi-squared value is about 1.) 
 
 We have one more type of parameter to fit: the FDJUMPDM parameter. It's important for this step that your PINT version is 1.0. If it's not, you won't be able to use this tool because it's a pretty new feature. FDJUMPDM parameters apply for InPTA, MPTA, NANOGrav and PPTA but not EPTA. However, you always want to have a "reference" PTA just like we had a reference system in our phase jumps. That means if e.g.you have data from NANOGrav and PPTA, you'll only fit an FDJUMPDM parameter for one of them. 
 
@@ -62,4 +62,4 @@ For our example, we'll have the par file lines
     FDJUMPDM -pta MPTA 0 1
     FDJUMPDM -pta InPTA 0 1
 
-At this stage, you should have a full combined file!
+At this stage, you should have a full combined file! An additional resource is the v1 combination instructions here: https://docs.google.com/presentation/d/17r2oCcc_EXx-BnTTYMs7ERK9JeRph_3mwTvpAAyHdv0/edit#slide=id.g2e0b4486318_0_0. One warning: my solution is not sure it's converged at this point -- this may be due to the fact that we haven't done noise modeling or detailed DM modeling yet, so it's not necessarily a show stopper (esp. with a small chi-squared/good looking residual plot).
