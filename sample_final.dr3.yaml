@@ -1,42 +1,45 @@
+# This is what your yaml file should look like for a final fit.
 source: J1744-1134
 par-directory: pars/
 tim-directory: tims/J1744-1134/
-timing-model: J1744-1134_PINT_20230317_prenoise.nb.par
+timing-model: J1744-1134_PINT_20240612_prenoise.nb.par
 compare-model: 
 toas:
-- EFF.EBPP.1360.tim # Effelsberg
-- EFF.EBPP.1410.tim
-- EFF.EBPP.2639.tim
-- EFF.P200.1380.tim
-- EFF.P217.1380.tim
-- EFF.S110.2487.tim
-- EFF.S60.4857.tim
-- GM.GWB.1460.200.b0.tim # GMRT
-- GM.GWB.500.200.b1.tim
-- J1744-1134.tim # Parkes
-- J1744-1134_PINT_20220302.nb.tim # GBT
-- JBO.DFB.1520.tim #Jodrell
-- JBO.ROACH.1520.tim
-- LEAP.1396.tim #LEAP
-- NRT.BON.1400.tim # Nancay
-- NRT.BON.1600.tim
-- NRT.BON.2000.tim
-- NRT.NUPPI.1484.tim
-- NRT.NUPPI.2539.tim
-- WSRT.P1.323.tim # Westerbork
-- WSRT.P1.367.tim
-- WSRT.P2.1380.tim
-- J1744-1134_16ch.tim # MeerKAT
+- EPTA_DR2/J1744-1134/tims/EFF.EBPP.1360.tim # Effelsberg
+- EPTA_DR2/J1744-1134/tims/EFF.EBPP.1410.tim
+- EPTA_DR2/J1744-1134/tims/EFF.EBPP.2639.tim
+- EPTA_DR2/J1744-1134/tims/EFF.P200.1380.tim
+- EPTA_DR2/J1744-1134/tims/EFF.P217.1380.tim
+- EPTA_DR2/J1744-1134/tims/EFF.S110.2487.tim
+- EPTA_DR2/J1744-1134/tims/EFF.S60.4857.tim
+#- EPTA_DR2/J1744-1134/tims/JBO.DFB.1400.tim # Orphaned receiver, just take it out.
+- EPTA_DR2/J1744-1134/tims/JBO.DFB.1520.tim #Jodrell
+- EPTA_DR2/J1744-1134/tims/JBO.ROACH.1520.tim
+- EPTA_DR2/J1744-1134/tims/LEAP.1396.tim #LEAP
+- EPTA_DR2/J1744-1134/tims/NRT.BON.1400.tim # Nancay
+- EPTA_DR2/J1744-1134/tims/NRT.BON.1600.tim
+- EPTA_DR2/J1744-1134/tims/NRT.BON.2000.tim
+- EPTA_DR2/J1744-1134/tims/NRT.NUPPI.1484.tim
+- EPTA_DR2/J1744-1134/tims/NRT.NUPPI.2539.tim
+- EPTA_DR2/J1744-1134/tims/WSRT.P1.323.tim # Westerbork
+- EPTA_DR2/J1744-1134/tims/WSRT.P1.367.tim
+- EPTA_DR2/J1744-1134/tims/WSRT.P2.1380.tim
+- InPTA_DR1/J1744-1134/tims/GM.GWB.1460.200.b0.tim # GMRT
+- InPTA_DR1/J1744-1134/tims/GM.GWB.500.200.b1.tim
+- PPTA_DR3/J1744-1134.tim # Parkes:
+- MPTA_DR1/J1744-1134_16ch.tim # MeerKAT
+- NANOGrav_15y/tim/J1744-1134_PINT_20220302.nb.tim # GBT
 
 
 free-params: 
-             [PX, ELONG, ELAT, PMELONG, PMELAT, F0, F1, DM1, DM2, JUMP1, JUMP2, JUMP3,
+             [PX, ELONG, ELAT, PMELONG, PMELAT, F0, F1, DM, DM1, DM2, 
+             FD1JUMP1, FD2JUMP1, FD3JUMP1, FD4JUMP1, FD1JUMP2, FD2JUMP2, FD3JUMP2, FDJUMPDM1, FDJUMPDM2, FDJUMPDM3, JUMP1, JUMP2, JUMP3,
              JUMP4, JUMP5, JUMP6, JUMP7, JUMP8, JUMP9, JUMP10, JUMP11,
              JUMP12, JUMP13, JUMP14, JUMP15, JUMP16, JUMP17, JUMP18, JUMP19, JUMP20, JUMP21, 
              JUMP22,JUMP23, JUMP24, JUMP25, JUMP26, JUMP27, JUMP28, JUMP29, JUMP30, JUMP31, 
              JUMP32, JUMP33, JUMP34, JUMP35, JUMP36, JUMP37, JUMP38, JUMP39, JUMP40,  JUMP41, 
              JUMP42, JUMP43, JUMP44, JUMP45, JUMP46, JUMP47,JUMP48, JUMP49, JUMP50,  JUMP51, 
-             JUMP52, JUMP53]
+             JUMP52, JUMP53, JUMP54, JUMP55]
 free-dmx: Yes
 toa-type: NB
 fitter: DownhillGLSFitter
@@ -44,7 +47,21 @@ n-iterations: 20
 ephem: DE440
 bipm: BIPM2021
 
+dmx:  # control dmx windowing/fixing
+  ignore-dmx: false
+  fratio: 1.1
+  max-sw-delay: 0.1 # finer binning when solar wind delay > threshold (us)
+  custom-dmx: [] # designated by [mjd_low,mjd_hi,binsize]
+outlier: # control outlier analysis runs
+  method: gibbs
+  n-burn: 1000
+  n-samples: 20000
 
+intermediate-results: # use results from previous runs
+  noise-dir: /nanograv/share/15yr/timing/intermediate/20220301.Noise.nb.ac12e98/
+  compare-noise-dir: /nanograv/share/15yr/timing/intermediate/20220222.Noise.nb.4e07003/
+  #excised-tim: /nanograv/share/15yr/timing/intermediate/20220209.Outlier.nb.3460db7/J1744-1134.nb/J1744-1134.nb_excise.tim
+  no-corner: true
 ignore: # toa excision
   mjd-start:
   mjd-end:
@@ -57,6 +74,17 @@ ignore: # toa excision
 
   prob-outlier: 0.1
 
-
+check:  # check before final
+  toa-outliers:
+  dmx-outliers:
+  unusual-params:
+  other:
+  cleared: true
 changelog:
-- '2023-06-02 INIT: Make initial yaml file'
+- '2022-10-11 removed a handful of large residual EPTA TOAs'
+- '2023-05-20 bjorn.larsen NOISE: Initial noise model'
+- '2023-05-31 deborah.good ADD: Added FD3, FD4, FD5'
+- '2023-07-04 deborah.good ADD: Added DM fitting'
+- '2023-07-04 deborah.good REMOVE: Remove FD5'
+- '2024-06-13 deborah.good: REMOVE: Remove FD parameters'
+- '2024-06-13 deborah.good ADD: FDJUMPs and FDJUMPDM'
