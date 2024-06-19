@@ -5,41 +5,41 @@ tim-directory: tims/J1744-1134/
 timing-model: J1744-1134_PINT_20240612_prenoise.nb.par
 compare-model: 
 toas:
-- EPTA_DR2/J1744-1134/tims/EFF.EBPP.1360.tim # Effelsberg
-- EPTA_DR2/J1744-1134/tims/EFF.EBPP.1410.tim
-- EPTA_DR2/J1744-1134/tims/EFF.EBPP.2639.tim
-- EPTA_DR2/J1744-1134/tims/EFF.P200.1380.tim
-- EPTA_DR2/J1744-1134/tims/EFF.P217.1380.tim
-- EPTA_DR2/J1744-1134/tims/EFF.S110.2487.tim
-- EPTA_DR2/J1744-1134/tims/EFF.S60.4857.tim
-#- EPTA_DR2/J1744-1134/tims/JBO.DFB.1400.tim # Orphaned receiver, just take it out.
-- EPTA_DR2/J1744-1134/tims/JBO.DFB.1520.tim #Jodrell
-- EPTA_DR2/J1744-1134/tims/JBO.ROACH.1520.tim
-- EPTA_DR2/J1744-1134/tims/LEAP.1396.tim #LEAP
-- EPTA_DR2/J1744-1134/tims/NRT.BON.1400.tim # Nancay
-- EPTA_DR2/J1744-1134/tims/NRT.BON.1600.tim
-- EPTA_DR2/J1744-1134/tims/NRT.BON.2000.tim
-- EPTA_DR2/J1744-1134/tims/NRT.NUPPI.1484.tim
-- EPTA_DR2/J1744-1134/tims/NRT.NUPPI.2539.tim
-- EPTA_DR2/J1744-1134/tims/WSRT.P1.323.tim # Westerbork
-- EPTA_DR2/J1744-1134/tims/WSRT.P1.367.tim
-- EPTA_DR2/J1744-1134/tims/WSRT.P2.1380.tim
-- InPTA_DR1/J1744-1134/tims/GM.GWB.1460.200.b0.tim # GMRT
-- InPTA_DR1/J1744-1134/tims/GM.GWB.500.200.b1.tim
-- PPTA_DR3/J1744-1134.tim # Parkes:
-- MPTA_DR1/J1744-1134_16ch.tim # MeerKAT
-- NANOGrav_15y/tim/J1744-1134_PINT_20220302.nb.tim # GBT
+- EFF.EBPP.1360.tim # Effelsberg
+- EFF.EBPP.1410.tim
+- EFF.EBPP.2639.tim
+- EFF.P200.1380.tim
+- EFF.P217.1380.tim
+- EFF.S110.2487.tim
+- EFF.S60.4857.tim
+- JBO.DFB.1520.tim #Jodrell
+- JBO.ROACH.1520.tim
+- LEAP.1396.tim #LEAP
+- NRT.BON.1400.tim # Nancay
+- NRT.BON.1600.tim
+- NRT.BON.2000.tim
+- NRT.NUPPI.1484.tim
+- NRT.NUPPI.2539.tim
+- WSRT.P1.323.tim # Westerbork
+- WSRT.P1.367.tim
+- WSRT.P2.1380.tim
+- GM.GWB.1460.200.b0.tim # GMRT
+- GM.GWB.500.200.b1.tim
+- J1744-1134.tim # Parkes:
+- J1744-1134_16ch.tim # MeerKAT
+- J1744-1134_PINT_20220302.nb.tim # GBT
 
 
 free-params: 
              [PX, ELONG, ELAT, PMELONG, PMELAT, F0, F1, DM, DM1, DM2, 
-             FD1JUMP1, FD2JUMP1, FD3JUMP1, FD4JUMP1, FD1JUMP2, FD2JUMP2, FD3JUMP2, FDJUMPDM1, FDJUMPDM2, FDJUMPDM3, JUMP1, JUMP2, JUMP3,
-             JUMP4, JUMP5, JUMP6, JUMP7, JUMP8, JUMP9, JUMP10, JUMP11,
+             FD1JUMP1, FD2JUMP1, FD3JUMP1, FD4JUMP1, FD1JUMP2, FD2JUMP2, FD3JUMP2, FDJUMPDM1, FDJUMPDM2, FDJUMPDM3, 
+             JUMP1, JUMP2, JUMP3, JUMP4, JUMP5, JUMP6, JUMP7, JUMP8, JUMP9, JUMP10, JUMP11,
              JUMP12, JUMP13, JUMP14, JUMP15, JUMP16, JUMP17, JUMP18, JUMP19, JUMP20, JUMP21, 
              JUMP22,JUMP23, JUMP24, JUMP25, JUMP26, JUMP27, JUMP28, JUMP29, JUMP30, JUMP31, 
              JUMP32, JUMP33, JUMP34, JUMP35, JUMP36, JUMP37, JUMP38, JUMP39, JUMP40,  JUMP41, 
              JUMP42, JUMP43, JUMP44, JUMP45, JUMP46, JUMP47,JUMP48, JUMP49, JUMP50,  JUMP51, 
              JUMP52, JUMP53, JUMP54, JUMP55]
+ 
 free-dmx: Yes
 toa-type: NB
 fitter: DownhillGLSFitter
@@ -58,9 +58,8 @@ outlier: # control outlier analysis runs
   n-samples: 20000
 
 intermediate-results: # use results from previous runs
-  noise-dir: /nanograv/share/15yr/timing/intermediate/20220301.Noise.nb.ac12e98/
-  compare-noise-dir: /nanograv/share/15yr/timing/intermediate/20220222.Noise.nb.4e07003/
-  #excised-tim: /nanograv/share/15yr/timing/intermediate/20220209.Outlier.nb.3460db7/J1744-1134.nb/J1744-1134.nb_excise.tim
+  noise-dir:
+  compare-noise-dir: 
   no-corner: true
 ignore: # toa excision
   mjd-start:
